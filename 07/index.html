@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.js"
+    ></script>
+    <title>Using real Component</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.querySelector('#root');
+
+      // Pure JavaScript: create new element
+      // const element = document.createElement('div');
+      // element.textContent = 'Hi folks';
+      // root.appendChild(element);
+
+      // React: create new element
+      // const element = React.createElement('div', null, 'Hi People');
+      // ReactDOM.render(element, root);
+
+      // React JSX with Babel: create new element
+      // https://babeljs.io/repl
+      // const element = <div>Hello World</div>;
+      // ReactDOM.render(element, root);
+
+      // React JSX with Babel: create new element
+      // https://babeljs.io/repl
+      const myText = 'Hello World!';
+      const myClass = 'container';
+
+      // function childElementAsFunction() {
+      //   return childElementAsVariable;
+      // }
+
+      //const childElementAsFunction = (props) => <div>{props.message}</div>;
+      const ChildElementAsJSX = (props) => <div>{props.message}</div>;
+
+      const element = (
+        <div className={myClass}>
+          {/* childElementAsFunction({ message: 'Hello' }) */}
+          <ChildElementAsJSX message="Hello" />
+          <ChildElementAsJSX message="Bye" />
+        </div>
+      );
+
+      ReactDOM.render(element, root);
+    </script>
+  </body>
+</html>
