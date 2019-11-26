@@ -21,7 +21,7 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      const root = document.querySelector('#root');
+      const root = document.querySelector("#root");
 
       // Pure JavaScript: create new element
       // const element = document.createElement('div');
@@ -39,20 +39,20 @@
 
       // React JSX with Babel: create new element
       // https://babeljs.io/repl
-      const myText = 'Hello World!';
-      const myClass = 'container';
+      const myText = "Hello World!";
+      const myClass = "container";
 
       const childElementAsVariable = <div>Child Element As Variable</div>;
 
       // function childElementAsFunction() {
       //   return childElementAsVariable;
       // }
-      const childElementAsFunction = (props) => <div>{props.message}</div>;
+      const childElementAsFunction = props => <div>{props.message}</div>;
 
       const element = (
         <div className={myClass}>
           {childElementAsVariable}
-          {childElementAsFunction({ message: 'Hello' })}
+          {childElementAsFunction({ message: "Hello" })}
         </div>
       );
 
