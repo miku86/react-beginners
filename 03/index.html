@@ -11,6 +11,8 @@
       crossorigin
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
     ></script>
+
+    <!-- import babel to use JSX syntax-->
     <script
       crossorigin
       src="https://unpkg.com/@babel/standalone@7.7.4/babel.min.js"
@@ -20,13 +22,10 @@
   <body>
     <div id="root"></div>
 
+    <!-- new type here-->
     <script type="text/babel">
+      // find container for app
       const root = document.querySelector("#root");
-
-      // Pure JavaScript: create new element
-      // const element = document.createElement('div');
-      // element.textContent = 'Hi folks';
-      // root.appendChild(element);
 
       // React: create new element
       // const element = React.createElement('div', null, 'Hi People');
@@ -34,6 +33,9 @@
 
       // React JSX with Babel: create new element
       // https://babeljs.io/repl
+
+      // create a new div element (with JSX)
+      // to use JSX, we have to import babel and use it in our script tag
       const element = <div>Hello World</div>;
 
       ReactDOM.render(element, root);

@@ -23,11 +23,6 @@
     <script type="text/babel">
       const root = document.querySelector("#root");
 
-      // Pure JavaScript: create new element
-      // const element = document.createElement('div');
-      // element.textContent = 'Hi folks';
-      // root.appendChild(element);
-
       // React: create new element
       // const element = React.createElement('div', null, 'Hi People');
       // ReactDOM.render(element, root);
@@ -44,6 +39,7 @@
 
       const childElementAsVariable = <div>Child Element As Variable</div>;
 
+      // this is an arrow function, it has props as parameter
       const childElementAsFunction = props => <div>{props.message}</div>;
 
       const element = (

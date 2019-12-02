@@ -15,29 +15,33 @@
       crossorigin
       src="https://unpkg.com/@babel/standalone@7.7.4/babel.min.js"
     ></script>
-    <title>Using JavaScript in JSX</title>
+    <title>Using State</title>
   </head>
   <body>
     <div id="root"></div>
 
     <script type="text/babel">
-      // find container for app
       const root = document.querySelector("#root");
 
-      // React JSX with Babel: create new element
-      // https://babeljs.io/repl
-      // const element = <div>Hello World</div>;
-      // ReactDOM.render(element, root);
+      const App = () => {
+        const [isHomepage, setIsHomepage] = React.useState(true);
 
-      // React JSX with Babel: create new element
-      // https://babeljs.io/repl
-      const myText = "Hello World!";
-      const myClass = "container";
+        return (
+          <div>
+            <button
+              onClick={() => {
+                setIsHomepage(prev => !prev);
+              }}
+            >
+              Change Page
+            </button>
 
-      // use variables in our JSX syntax
-      const element = <div className={myClass}>{myText}</div>;
+            {isHomepage ? <h1>Homepage</h1> : <h1>Other Page</h1>}
+          </div>
+        );
+      };
 
-      ReactDOM.render(element, root);
+      ReactDOM.render(<App />, root);
     </script>
   </body>
 </html>

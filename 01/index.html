@@ -9,12 +9,16 @@
     <div id="root"></div>
 
     <script>
-      const root = document.querySelector('#root');
+      // find container for app
+      const root = document.querySelector("#root");
 
-      // Pure JavaScript: create new element
-      const element = document.createElement('div');
-      element.textContent = 'Hi folks';
+      // create new div element
+      const element = document.createElement("div");
 
+      // add text to new div
+      element.textContent = "Hi folks";
+
+      // add new div to app container
       root.appendChild(element);
     </script>
   </body>

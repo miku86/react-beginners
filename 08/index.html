@@ -23,25 +23,32 @@
     <script type="text/babel">
       const root = document.querySelector("#root");
 
-      const App = () => {
-        const [isHomepage, setIsHomepage] = React.useState(true);
+      // React JSX with Babel: create new element
+      // https://babeljs.io/repl
+      // const element = <div>Hello World</div>;
+      // ReactDOM.render(element, root);
 
-        return (
-          <div>
-            <button
-              onClick={() => {
-                setIsHomepage(prev => !prev);
-              }}
-            >
-              Change Page
-            </button>
+      // React JSX with Babel: create new element
+      // https://babeljs.io/repl
+      const myText = "Hello World!";
+      const myClass = "container";
 
-            {isHomepage ? <h1>Homepage</h1> : <h1>Other Page</h1>}
-          </div>
-        );
-      };
+      const childElementAsFunction = props => <div>{props.message}</div>;
 
-      ReactDOM.render(<App />, root);
+      // uppercase name => look at how we invoke it at the bottom
+      const ChildElementAsJSX = props => <div>{props.message}</div>;
+
+      // also uppercase, and made it a function
+      const Element = () => (
+        <div className={myClass}>
+          {childElementAsFunction({ message: "Hello" })}
+          <ChildElementAsJSX message="Hello" />
+          <ChildElementAsJSX message="Bye" />
+        </div>
+      );
+
+      // now we can use it with the  JSX syntax
+      ReactDOM.render(<Element />, root);
     </script>
   </body>
 </html>

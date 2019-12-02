@@ -23,15 +23,6 @@
     <script type="text/babel">
       const root = document.querySelector("#root");
 
-      // Pure JavaScript: create new element
-      // const element = document.createElement('div');
-      // element.textContent = 'Hi folks';
-      // root.appendChild(element);
-
-      // React: create new element
-      // const element = React.createElement('div', null, 'Hi People');
-      // ReactDOM.render(element, root);
-
       // React JSX with Babel: create new element
       // https://babeljs.io/repl
       // const element = <div>Hello World</div>;
@@ -43,6 +34,8 @@
       const myClass = "container";
 
       const childElement = <div>Child Element</div>;
+
+      // work with some more variables
       const element = (
         <div className={myClass}>
           {childElement}

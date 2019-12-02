@@ -17,15 +17,18 @@
     <div id="root"></div>
 
     <script>
-      const root = document.querySelector('#root');
+      // find container for app
+      const root = document.querySelector("#root");
 
       // Pure JavaScript: create new element
       // const element = document.createElement('div');
       // element.textContent = 'Hi folks';
       // root.appendChild(element);
 
-      // React: create new element
-      const element = React.createElement('div', null, 'Hi People');
+      // create new div element with no properties and a text
+      const element = React.createElement("div", null, "Hi People");
+
+      // render the new div element to the app container
       ReactDOM.render(element, root);
     </script>
   </body>

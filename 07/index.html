@@ -23,15 +23,6 @@
     <script type="text/babel">
       const root = document.querySelector("#root");
 
-      // Pure JavaScript: create new element
-      // const element = document.createElement('div');
-      // element.textContent = 'Hi folks';
-      // root.appendChild(element);
-
-      // React: create new element
-      // const element = React.createElement('div', null, 'Hi People');
-      // ReactDOM.render(element, root);
-
       // React JSX with Babel: create new element
       // https://babeljs.io/repl
       // const element = <div>Hello World</div>;
@@ -42,16 +33,14 @@
       const myText = "Hello World!";
       const myClass = "container";
 
-      // function childElementAsFunction() {
-      //   return childElementAsVariable;
-      // }
+      const childElementAsFunction = props => <div>{props.message}</div>;
 
-      //const childElementAsFunction = (props) => <div>{props.message}</div>;
+      // uppercase name => look at how we invoke it at the bottom
       const ChildElementAsJSX = props => <div>{props.message}</div>;
 
       const element = (
         <div className={myClass}>
-          {/* childElementAsFunction({ message: 'Hello' }) */}
+          {childElementAsFunction({ message: "Hello" })}
           <ChildElementAsJSX message="Hello" />
           <ChildElementAsJSX message="Bye" />
         </div>
