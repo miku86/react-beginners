@@ -3,7 +3,7 @@
 ## Download
 
 - if you do know how to use git: `git clone git@github.com:miku86-workshops/react-beginners.git`
-- if you do _not_ know how to use git: [zip](https://github.com/miku86-workshops/react-beginners/archive/master.zip)
+- if you do _not_ know how to use git: [click here to download](https://github.com/miku86-workshops/react-beginners/archive/master.zip)
 
 ---
 
